@@ -7,18 +7,26 @@
 
 import UIKit
 
+struct Employee {
+    let name: String
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var updateLbl: UILabel!
-    var nameArry = [String]()
+    var nameArry = [Employee]()
     var index = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+
+        let emp1 = Employee(name: "Tauheed")
+        let emp2 = Employee(name: "Ahmad")
+        let emp3 = Employee(name: "Ansari")
+        nameArry = [emp1, emp2, emp3]
         
-        nameArry = ["Tauheed", "Ahmad", "Ansari"]
-        updateLbl.text = nameArry[index]
+        updateLbl.text = nameArry[index].name
     }
 
     // tauheeda@mindfire made some major changes.
@@ -31,7 +39,7 @@ class ViewController: UIViewController {
             index = 0
         }
         
-        updateLbl.text = nameArry[index]
+        updateLbl.text = nameArry[index].name
     }
     
 }
