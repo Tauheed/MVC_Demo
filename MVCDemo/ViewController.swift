@@ -27,6 +27,7 @@ class ViewController: UIViewController {
         nameArry = [emp1, emp2, emp3]
         
         updateLbl.text = nameArry[index].name
+        /////
     }
 
     // tauheeda@mindfire made some major changes.
