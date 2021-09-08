@@ -18,7 +18,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        updateLbl.text = employeeObj.nameArry[0].name
+        let empObj = employeeObj.updateEmployee()
+        updateLbl.text = empObj.name
     }
 
     // tauheeda@mindfire made some major changes.
